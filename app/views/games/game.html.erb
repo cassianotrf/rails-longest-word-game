@@ -1,0 +1,13 @@
+<%= @grid %>
+
+<form action="score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="hidden" name="grid" value="<%= @grid %>">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
+  <label for="guess">Make your word</label>
+  <input type="text" id="guess" name="word">
+  <button id="go" class="btn" type="submit">
+    Ready
+  </button>
+</form>
+
